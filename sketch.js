@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth/2, windowHeight/2);
   x = 0;
   y = 0;
   rectMode(CENTER);
@@ -98,10 +98,52 @@ function texturee(){
 }
 
 function bigCirc() {
+
   for(l = 0; l < 500; l++){
+   let x2 = random(20, width);
+   let y2 = random(20, height);
     var m = noise(l);
+    if(farb < 0.5 && x2 < width * (1 / 3)){
     fill(random(0, 255), random(0,76), random(90,220));
     //fill(m*255, m*20, m*10); dunkelrot
-    circle(random(20, width), random(20, height), 10 / m);
-  }
-}
+    
+    circle(x2, y2, 10 / m);}
+    
+    else if(farb < 0.5 && x2 > width * (2 / 3)){
+       fill(random(0, 255), random(0,76), random(90,220));
+    //fill(m*255, m*20, m*10); dunkelrot
+    
+    circle(x2, y2, 10 / m);}
+    
+    else{
+         fill(random(0, 255));
+    //fill(m*255, m*20, m*10); dunkelrot
+    
+    circle(x2, y2, 10 / m);}
+    
+    if(farb > 0.5 && x2 > width * (2 / 3)){
+         fill(random(0, 255));
+    //fill(m*255, m*20, m*10); dunkelrot
+    
+    circle(x2, y2, 10 / m);}
+    
+     else if(farb > 0.5 && x2 < width * (1 / 3)){
+         fill(random(0, 255));
+    //fill(m*255, m*20, m*10); dunkelrot
+    
+    circle(x2, y2, 10 / m);}
+    
+    else if(farb > 0.5 && x2 > width * (1 / 3) && x2 < width * (2 / 3)){
+    fill(random(0, 255), random(0,76), random(90,220));
+    //fill(m*255, m*20, m*10); dunkelrot
+    
+    circle(x2, y2, 10 / m);}
+    
+      
+      
+      }
+    
+    
+      
+    }
+  
