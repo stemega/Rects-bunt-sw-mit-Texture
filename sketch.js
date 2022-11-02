@@ -16,8 +16,11 @@ function draw() {
   oneRowRects();
 
   }
-  
+ 
+   bigCirc();
   texturee();
+  
+ 
   
 }
 
@@ -92,4 +95,13 @@ function texturee(){
     }
   }
   //noLoop();
+}
+
+function bigCirc() {
+  for(l = 0; l < 500; l++){
+    var m = noise(l);
+    fill(random(0, 255), random(0,76), random(90,220));
+    //fill(m*255, m*20, m*10); dunkelrot
+    circle(random(20, width), random(20, height), 10 / m);
+  }
 }
