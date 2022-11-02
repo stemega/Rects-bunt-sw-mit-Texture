@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight);
   x = 0;
   y = 0;
   rectMode(CENTER);
